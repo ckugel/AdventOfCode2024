@@ -8,4 +8,6 @@ include_directories(src)
 add_executable(AdventOfCode2024
         src/DayOne.cpp
         src/DayOne.h
-        src/main.cpp)
+        src/main.cpp
+        src/DayTwo.h
+        src/DayTwo.cpp)
