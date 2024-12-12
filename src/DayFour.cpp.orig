@@ -20,11 +20,15 @@ uint64_t DayFour::xmasInstances() {
                 int32_t nextI = i;
                 int32_t nextJ = j;
 
+<<<<<<< HEAD
                for (std::pair<int32_t, int32_t> pair : check) {
                    if (inBounds(nextI - 1, nextJ - 1) && searchThroughFoundXM(i, j, nextI + check[i].first, nextJ + check[i].second)) {
                        numInstances++;
                    }
                }
+=======
+                if (inBounds(nextI - 1, nextJ - 1) && )
+>>>>>>> 65134659e0511209203f4691f80b42ace25efb9c
            }
        }
    }
@@ -40,6 +44,7 @@ DayFour::DayFour() {
         return;
     }
 
+<<<<<<< HEAD
     std::string line;
     while (std::getline(inputFile, line)) {
         std::vector<int32_t> vec;
@@ -50,6 +55,8 @@ DayFour::DayFour() {
         }
         levels.push_back(vec);
     }
+=======
+>>>>>>> 65134659e0511209203f4691f80b42ace25efb9c
 
 
 }
@@ -60,6 +67,7 @@ bool DayFour::inBounds(int32_t i, int32_t j) {
 
 bool DayFour::searchThroughFoundXM(int32_t ix, int32_t jx, int32_t im, int32_t jm) {
     // extend the indices in sort of a line to determine.
+<<<<<<< HEAD
     int8_t iModifier = im - ix;
     int8_t jModifier = jm - jx;
 
@@ -74,5 +82,12 @@ bool DayFour::searchThroughFoundXM(int32_t ix, int32_t jx, int32_t im, int32_t j
             return true;
         }
     }
+
+
+
+=======
+    int8_t iModifier = 0;
+    int8_t jModifier = 0;
+>>>>>>> 65134659e0511209203f4691f80b42ace25efb9c
     return false;
 }

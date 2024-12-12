@@ -9,6 +9,7 @@
 #include <cstdint>
 #include <vector>
 
+<<<<<<< HEAD
 
 const std::vector<std::pair<int32_t, int32_t>> check
     { {-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}};
@@ -16,6 +17,12 @@ const std::vector<std::pair<int32_t, int32_t>> check
 class DayFour {
     std::vector<std::vector<char>> board;
 
+
+=======
+class DayFour {
+    std::vector<std::vector<char>> board;
+
+>>>>>>> 65134659e0511209203f4691f80b42ace25efb9c
 public:
     DayFour();
     uint64_t xmasInstances();
