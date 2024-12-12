@@ -82,3 +82,30 @@ uint8_t DayTwo::calculateNewChanging(int32_t diff) {
         return 2;
     }
 }
+
+uint32_t DayTwo::getNumberSafeLevelsWithRemoval() {
+    uint32_t runningCounter = 0;
+
+    for (auto & level : levels) {
+        if (isSafeFloor(level)) {
+            runningCounter++;
+        }
+        else {
+            for (uint32_t ignore = 0; ignore < level.size(); ignore++) {
+                std::vector<int32_t> vec;
+                for (uint32_t i = 0; i < level.size(); i++) {
+                    if (i != ignore) {
+                        vec.push_back(level[i]);
+                    }
+                }
+                if (isSafeFloor(vec)) {
+                    runningCounter++;
+                    break;
+                }
+            }
+        }
+    }
+
+    return runningCounter;
+}
+

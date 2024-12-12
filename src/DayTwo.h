@@ -17,6 +17,7 @@ class DayTwo {
 public:
     DayTwo();
     uint32_t getNumberOfSafeLevels();
+    uint32_t getNumberSafeLevelsWithRemoval();
 
 };
 
