@@ -11,4 +11,5 @@ add_executable(AdventOfCode2024
         src/main.cpp
         src/DayTwo.h
         src/DayTwo.cpp
-        src/DayThree.cpp)
+        src/DayThree.cpp
+        src/DayFour.cpp)

@@ -8,13 +8,15 @@
 #include <fstream>
 #include <iostream>
 #include <algorithm>
+#include <DayFour.h>
+
 #include "DayOne.h"
 #include "DayTwo.h"
 #include "DayThree.h"
 
 int main() {
-    DayOne dayOne;
     /*
+    DayOne dayOne;
     std::cout << "difference: " << dayOne.calculateDifference() << std::endl;
     std::cout << "similarity score: " << dayOne.similarityScore() << std::endl;
      */
@@ -25,9 +27,14 @@ int main() {
     std::cout << "number of safe levels with remove: " << dayTwo.getNumberSafeLevelsWithRemoval() << std::endl;
      */
 
+    /*
     DayThree dayThree;
     std::cout << "result part 1: " << DayThree::parseIntoSum() << std::endl;
     std::cout << "result part 2: " << DayThree::parseIntoSumDoOrDoNot() << std::endl;
+    */
+
+    DayFour dayFour;
+    std::cout << "part 1: " << dayFour.xmasInstances() << std::endl;
 
     return 0;
 }
