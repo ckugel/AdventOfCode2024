@@ -33,8 +33,9 @@ int main() {
     std::cout << "result part 2: " << DayThree::parseIntoSumDoOrDoNot() << std::endl;
     */
 
-    DayFour dayFour;
+    DayFour dayFour = DayFour();
     std::cout << "part 1: " << dayFour.xmasInstances() << std::endl;
-
+    std::cout << "part 2: " << dayFour.crossMASes() << std::endl;
+    // std::cout << "s - m: " << 's' - 'm' << std::endl;
     return 0;
 }
