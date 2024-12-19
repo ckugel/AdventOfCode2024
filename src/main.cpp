@@ -13,6 +13,28 @@
 #include "DayOne.h"
 #include "DayTwo.h"
 #include "DayThree.h"
+#include "DayFive.h"
+
+std::vector<int> finalPrices(std::vector<int>& prices) {
+    std::vector<int> newPrices;
+    newPrices.reserve(prices.size());
+
+    for (size_t i = 0; i < prices.size(); i++) {
+        bool found = false;
+        for (size_t j = i + 1; j < prices.size(); j++) {
+            if (prices[j] < prices[i]) {
+                newPrices.push_back(prices[i] - prices[j]);
+                found = true;
+               break;
+            }
+        }
+        if (!found) {
+            newPrices.push_back(prices[i]);
+        }
+    }
+
+    return newPrices;
+}
 
 int main() {
     /*
@@ -33,9 +55,16 @@ int main() {
     std::cout << "result part 2: " << DayThree::parseIntoSumDoOrDoNot() << std::endl;
     */
 
+    /*
     DayFour dayFour = DayFour();
     std::cout << "part 1: " << dayFour.xmasInstances() << std::endl;
     std::cout << "part 2: " << dayFour.crossMASes() << std::endl;
+     */
     // std::cout << "s - m: " << 's' - 'm' << std::endl;
+
+
+    DayFive dayFive = DayFive();
+    std::cout << "part 1: " << std::endl;
+
     return 0;
 }
